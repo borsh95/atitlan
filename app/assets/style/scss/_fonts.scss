@@ -1,0 +1,28 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+FONT FAMILY
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@mixin font-face($font-family, $url, $weight) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('#{$url}.eot');
+		src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+			url('#{$url}.woff2') format('woff2'),
+			url('#{$url}.woff') format('woff'),
+			url('#{$url}.ttf') format('truetype'),
+			url('#{$url}.svg#Calibri') format('svg');
+		font-weight: #{$weight};
+		font-display: swap;
+		font-style: normal;
+	}
+}
+
+@include font-face('Jost', '../../fonts/Jost-Regular', 400);
+@include font-face('Jost', '../../fonts/Jost-Medium', 500);
+@include font-face('Jost', '../../fonts/Jost-SemiBold', 600);
+@include font-face('Jost', '../../fonts/Jost-Bold', 700);
+@include font-face('Montserrat Alternates', '../../fonts/MontserratAlternates-ExtraLight', 200);
+@include font-face('Montserrat Alternates', '../../fonts/MontserratAlternates-Regular', 400);
+@include font-face('Montserrat Alternates', '../../fonts/MontserratAlternates-SemiBold', 600);
+@include font-face('Montserrat Alternates', '../../fonts/MontserratAlternates-Bold', 700);
+
+

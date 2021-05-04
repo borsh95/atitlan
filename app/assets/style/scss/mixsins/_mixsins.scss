@@ -1,0 +1,45 @@
+@mixin desctop {
+	@media (max-width: $desctop) {
+		@content;
+	}
+}
+
+@mixin desctop-mid {
+	@media (max-width: $desctop-mid) {
+		@content;
+	}
+}
+
+@mixin desctop-min {
+    @media (max-width: $desctop-min) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (max-width: $table) {
+        @content;
+    }
+}
+
+@mixin table-min {
+	@media (min-width: $table + 1) {
+		@content;
+	}
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tel {
+    @media (max-width: $tel) {
+        @content;
+    }
+}
+
+@function rubberSize($minW, $maxW, $minScrin, $maxScrin) {
+	@return calc(#{$minW}px + (#{$maxW} - #{$minW})*((100vw - #{$minScrin}px)/(#{$maxScrin} - #{$minScrin})));
+}	

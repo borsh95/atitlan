@@ -1,0 +1,96 @@
+@import "fonts";
+@import "./base/variables";
+@import "./mixsins/mixsins";
+@import "./base/nullstyle";
+@import "./base/settings";
+
+html,
+body {
+    font-weight: var(--fm-1_fw-m);
+	font-size: 16px;
+	font-family: var(--fm-1);
+    color: var(--color-text);
+}
+
+.global-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*--------------------------------Common--------------------------------*/
+.b-container {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1400px;
+
+	@include desctop-mid {
+		max-width: 1200px;
+	}
+
+	@include desctop-min {
+		max-width: 1000px;
+	}
+
+    @include table {
+        padding-right: 20px;
+        padding-left: 20px;
+        max-width: 768px;
+    }
+
+    @include mobile {
+        max-width: 100%;
+    }
+}
+
+.title-1 {
+	font-weight: var(--fm-1_fw-m);
+	font-size: 48px;
+
+	@include desctop-min {
+		font-size: 38px;
+	}
+
+	@include mobile {
+		font-size: 20px;
+		line-height: (25/20);
+	}
+}
+
+.title-2 {
+	font-weight: var(--fm-1_fw-m);
+	font-size: 36px;
+
+	@include desctop-min {
+		font-size: 32px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.text {
+	line-height: (30/18);
+	font-size: 18px;
+
+	@include mobile {
+		line-height: (24/16);
+		font-size: 16px;
+	}
+}
+
+@import "./components/btns";
+@import "./components/blocks";
+@import "./components/header";
+@import "./components/footer";
+
+/*--------------------------------Other--------------------------------*/
+@import "./pages/index";

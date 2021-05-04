@@ -1,0 +1,69 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+ОБЩИЕ СТИЛИ
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.flex {
+	display: flex;
+}
+
+/*Общие стили сетки*/
+.vt-center {
+	display: flex;
+	align-items: center;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.for-table {
+	display: none;
+
+	@include table {
+		display: block;
+	}
+}
+
+.overflow-h {
+	overflow: hidden;
+}
+
+.ob-fit-cover,
+.ob-fit-contain {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+}
+
+.ob-fit-cover {
+	object-fit: cover;
+}
+
+.ob-fit-contain {
+	object-fit: contain;
+}
+
+.for-mobile {
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.selected-text {
+	color: var(--cl-text-lig);
+}
+
+.text-red {
+	color: #ff0000;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+.fw-semiBold {
+	font-weight: 600;
+}
