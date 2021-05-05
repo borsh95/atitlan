@@ -1,3 +1,173 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 FOOTER
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+footer {
+	--color-bg: var(--black-300);
+
+	position: relative;
+	margin-top: auto;
+	font-family: var(--fm-2);
+	color: #fff;
+	background-color: var(--color-bg);
+
+	@at-root .#{&} {
+		$border: 1px solid rgba(255, 255, 255, 0.7);
+
+		&__logo-wrap,
+		&__contacts-ics,
+		&__lav,
+		&__ArtBro {
+			flex-shrink: 0;
+			width: 257px;
+			text-align: center;
+		}
+
+		&__logo-wrap {
+			margin-right: 60px;
+		}
+
+		&__logo-wrap,
+		&__lav {
+			border-right: 1px solid rgba(255, 255, 255, 0.7);
+		}
+
+		&__contacts-ics,
+		&__ArtBro {
+			border-left: 1px solid rgba(255, 255, 255, 0.7);
+		}
+
+		&__logo-wrap,
+		&__contacts-ics {
+			padding-top: 50px;
+		}
+
+		&__contacts-ics {
+			align-items: center;
+			margin-left: auto;
+		}
+
+		&__top {
+			display: flex;
+		}
+
+		&__content {
+			display: flex;
+			flex-grow: 1;
+		}
+
+		&__col {
+			display: flex;
+			flex-direction: column;
+			padding: 50px 0 38px;
+
+			&:not(:first-child) {
+				margin-left: 110px;
+			}
+			
+			&-item {
+				margin-top: 33px;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: (26/18);
+
+				&:nth-of-type(1) {
+					margin-top: 0;
+				}
+			}
+
+			&-text {
+				font-weight: 300;
+				line-height: 2;
+			}
+		}
+
+		&__bottom {
+			position: relative;
+			.b-container {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				border-top: $border;
+			}
+
+			&-item {
+				display: block;
+				padding: 35px 0 55px;
+
+				&:nth-child(2) {
+					margin-left: auto;
+					padding-right: 60px;
+				}
+			}
+		}
+	}
+
+	@include desctop-mid {
+		.#{&} {
+			&__logo-wrap,
+			&__contacts-ics,
+			&__lav,
+			&__ArtBro {
+				width: 220px;
+			}
+
+			&__logo-wrap,
+			&__content,
+			&__contacts-ics {
+				padding-top: 35px;
+			}
+
+			&__content {
+				display: flex;
+				padding: 40px 50px 30px;
+			}
+
+			&__col {
+				&:not(:first-child) {
+					margin-left: 60px;
+				}
+				
+				&-item {
+					margin-top: 25px;
+					font-weight: 500;
+					font-size: 17px;
+				}
+			}
+
+			&__bottom {
+				&-item {
+					display: block;
+					padding: 28px 0 40px;
+	
+					&:nth-child(2) {
+						padding-right: 50px;
+					}
+				}
+			}
+		}
+	}
+
+	@include table {
+		.#{&} {
+			&__logo-wrap,
+			&__lav {
+				border-right: none;
+			}
+	
+			&__contacts-ics,
+			&__ArtBro {
+				border-left: none;
+			}
+
+			&__top {
+				flex-direction: column;
+			}
+		}
+	}
+}

@@ -1,3 +1,176 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 COMMON BLOCKS
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*dropdown*/
+[data-dropdown="list"] {
+	height: 0;
+	min-height: 0;
+	overflow: hidden;
+	transition-property: min-height, height;
+	transition-duration: $duration;
+}
+
+.contacts-ics {
+	$this: &;
+
+	&__item {
+		display: inline-block;
+		margin-right: 32px;
+		max-width: 25px;
+		height: 25px;
+	}
+
+	&__item--viber {
+		width: 22px;
+	}
+	&__item--wp {
+		width: 24.4px;
+	}
+	&__item--insta {
+		width: 24.5px;
+	}
+	&__item--telegram {
+		width: 27px;
+	}
+
+	&--vertical {
+		display: flex;
+		flex-direction: column;
+		#{$this} {
+			
+
+			&__item {
+				margin-right: 0;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+
+/*hamburger*/
+.hamburger {
+	$this: &;
+	--size: 80px;
+	--heightLine: 2px;
+	--widthLine: 46.5%;
+	--air: 12.4px;
+	position: relative;
+	width: var(--size);
+	height: var(--size);
+	background-color: #3179BC;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: var(--widthLine);
+		height: var(--heightLine);
+		background-color: #fff;
+		transform: translate(-50%, -50%);
+		transition: background-color $duration;
+
+		&::before,
+		&::after {
+			content:"";
+			position: absolute;
+			left: 0;
+			height: inherit;
+			width: 100%;
+			background-color: #fff;
+			transition: transform $duration, left $duration;
+		}
+
+		&::before {
+			bottom: calc(100% + var(--air));
+			transform-origin: left bottom;
+		}
+
+		&::after {
+			top: calc(100% + var(--air));
+			transform-origin: left top;
+		}
+	}
+
+	&.active span {
+		background-color: transparent;
+		&::before {	
+			left: 4px;
+			transform: rotate(45deg);
+		}
+		&::after {	
+			left: 4px;
+			transform: rotate(-45deg);
+		}
+	}
+
+	@include mobile {
+		--size: 70px;
+		--heightLine: 2px;
+		--air: 10.82px;
+
+		&.active span::before,
+		&.active span::after {
+			left: 3.5px;
+		}
+
+		&.active span::after {
+			left: 4.5px;
+			margin-top: -2px;
+		}
+	}
+}
+/*firm-info*/
+.firm-info {
+	$this: &;
+	position: relative;
+	padding-left: 35px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 24px;
+		height: 25.45px;
+		background-size: contain;
+	}
+
+	&--address::before {
+		background: url(./../../img/sprite.svg#ic-home) no-repeat;
+	}
+	
+	&--email::before {
+		background: url(./../../img/sprite.svg#ic-email) no-repeat;
+	}
+
+	&--tel::before {
+		background: url(./../../img/sprite.svg#ic-tel) no-repeat;
+	}
+
+	&--time::before {
+		background: url(./../../img/sprite.svg#ic-time) no-repeat;
+	}
+}
+
+/*logo*/
+.logo {
+	cursor: pointer;
+
+	&--img {
+		flex-shrink: 0;
+		width: 104px;
+	}
+
+	&--text {
+		font-weight: bold;
+		font-size: 22px;
+		line-height: 1;
+		font-family: var(--fm-1);
+		color: #FFFFFF;
+
+		@include mobile {
+			font-size: 18px;
+		}
+	}
+}
+

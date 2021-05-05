@@ -2,13 +2,288 @@
 HEADER
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 header {
+	$bg-color-sub-menu: #6E96B6;
+	$color-link--hover: #000;
+
 	position: relative;
+	padding: 27px 0 0;
 	z-index: 100;
 	background: rgba(0, 98, 135, 0.45);
-	box-shadow: 0 5px 21px rgba(0, 0, 0, 0.16);
 	
+	.b-container {
+		justify-content: center;
+	}
 
 	@at-root .#{&} {
+
+		&__inner {
+			position: relative;
+			width: 1276px;
+		}
+
+		&__logo {
+			position: absolute;
+			top: 50%;
+			right: calc(100% + 104px);
+			transform: translateY(-50%);
+		}
+
+		&__contacts-ics {
+			margin-top: 8px;
+		}
+
+		&__tel--for-table {
+			margin-left: 46px;
+			width: 35.5px;
+			height: 34.5px;
+		}
+
+		&__firm-info {
+			font-size: 20px;
+			line-height: 1.8;
+			color: #fff;
+		}
+
+		&__top {
+			display: flex;
+			justify-content: center;
+			padding-bottom: 10px;
+			border-bottom: 3px solid #CFE9FF;
+
+			&-col {
+				display: flex;
+				flex-direction: column;
+				margin-right: 120px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
 		
+		&__burger {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	/*menu*/
+	@at-root .menu {
+		font-family: var(--fm-2);
+		font-weight: 500;
+
+		.sub-menu {
+			font-family: var(--fm-1);
+		}
+
+		@include table-min {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 30px;
+			width: 100%;
+			font-size: 28px;
+			line-height: 1;
+	
+			&__item-link,
+			a {
+				color:#fff;
+			}
+	
+			&__item {
+				position: relative;
+				padding: 21px 20px 24px;
+				transition: background-color $duration $delay;
+		
+				&:hover {
+					background-color: $bg-color-sub-menu;
+
+					.sub-menu {
+						opacity: 1;
+						pointer-events: all;
+					}
+				}
+			}
+
+			[data-dropdown="list"] {
+				height: auto;
+				min-height: auto;
+				overflow: visible;
+			}
+	
+			.sub-menu {
+				position: absolute;
+				top: calc(100% - 1px);
+				left: 0;
+				padding: 10px 0 36px;
+				width: 376px;
+				font-family: var(--fm-1);
+				background-color: $bg-color-sub-menu;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity $duration;
+				transition-delay: 0.1s;
+
+				&__item a {
+					display: block;
+					padding: 10px 23px;
+					font-size: 20px;
+					transition: background-color $duration;
+				}
+
+				&__item:hover a{
+					background-color: darken($bg-color-sub-menu, 20%);
+				}
+			}
+
+			@include desctop-min {
+				padding: 0 20px;
+				font-size: 24px;
+
+				&__item {
+					padding: 16px 10px 18px;
+				}
+			}
+		}
+
+		@include table {
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+
+			&__item-link,
+			.sub-menu__item a {
+				cursor: pointer;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 50px;
+				width: 100%;
+				color: #fff;
+				
+			}
+
+			&__item-link {
+				background-color: $bg-color-sub-menu;
+
+				@at-root span#{&} span {
+					position: relative;
+				}
+
+				@at-root span#{&} span::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: calc(100% + 7px);
+					width: 32px;
+					height: 15px;
+					background-image: url(./../../img/sprite.svg#arrow-drop);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					transform: translateY(-50%);
+					transition: transform $duration;
+				}
+
+				&.active span::before {
+					transform: translateY(-50%)  scaleY(-1) ;
+				}
+			}
+
+			.sub-menu {
+				background-color: darken($bg-color-sub-menu, 20%);
+				box-shadow: inset 0 20px 21px -15px rgba(0, 0, 0, 0.16), 
+							inset 0 -20px 21px -15px rgba(0,0,0, 0.16);
+			}
+		}
+		
+	}
+
+	@media (max-width: 1700px) {
+		@at-root .#{&} {
+			&__logo {
+				right: calc(100% + 30px);
+			}
+		}
+	}
+
+	@media (max-width: 1550px) {
+		@at-root .#{&} {
+			&__logo.logo--img {
+				display: none;
+			}
+		}
+	}
+
+	@include desctop-mid {
+		@at-root .#{&} {
+			&__inner {
+				width: 90%;
+			}
+		}
+	}
+
+	@include desctop-min {
+		padding: 19px 0 0;
+
+		@at-root .#{&} {
+			&__firm-info {
+				font-size: 18px;
+			}
+		}
+	}
+
+	@include table {
+		padding-top: 0;
+
+		.b-container {
+			justify-content: flex-start;
+		}
+		@at-root .#{&} {
+			&__logo {
+				right: 22px;
+			}
+
+			&__inner {
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			&__top {
+				display: none;
+			}
+
+			&__burger {
+				position: absolute;
+				left: 0;
+				top: 100%;
+				width: 100%;
+				transform-origin: center top;
+				transform: scaleY(0);
+				opacity: 0;
+				transition: transform $duration, opacity $duration;
+
+				&.open {
+					transform: scaleY(1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		@at-root .#{&} {
+			&__logo {
+				right: 20px;
+			}
+
+			&__tel--for-table {
+				margin-left: 35px;
+				width: 31px;
+				height: 50px;
+			}
+		}
 	}
 }

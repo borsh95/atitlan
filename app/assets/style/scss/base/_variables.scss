@@ -5,10 +5,16 @@ VARIABLES
 //********** css variables ********** 
 :root {
 	/*site font*/
-	--fm-1: "SFUIDisplay", sans-serif;
-	--fm-2: "Malgun Gothic", sans-serif;
+	--fm-1: "Montserrat Alternates", sans-serif;
+	--fm-2: "Jost", sans-serif;
 
-	
+	/*pallete*/
+	--blau-300: #2290B9;
+
+	--black-300: #444;
+
+	--color-primary: var(--blau-300);
+	--color-secondary: var(--black-300);
 }
 
 //********** scss variablse	********** 
@@ -16,11 +22,12 @@ VARIABLES
 $desctop: 1920px;
 $desctop-mid: 1450px;
 $desctop-min: 1220px;
-$table: 1024px;
+$table: 1124px;
 $mobile: 768px;
 $tel: 480px;
 
 
 /***********************Main*/
 $duration: 0.3s;
+$delay: 0.1s;
 

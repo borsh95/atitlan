@@ -10,7 +10,7 @@ const del = require('del');
 const svgSprite = require('gulp-svg-sprite');
 
 function svgSprites() {
-	return src('app/assets/img/**/*.svg')
+	return src('app/assets/img/icons/svg/*.svg')
 		.pipe(svgSprite({
 			mode: {
 				stack: {
@@ -51,7 +51,6 @@ function images() {
 
 function scripts() {
 	return src([
-		'app/assets/js/Search/Search.js',
 		'app/assets/js/index.js'
 	])
 		.pipe(concat('main.js'))
@@ -88,7 +87,7 @@ function watching() {
 	watch(['app/assets/style/scss/**/*.scss'], styles);
 	watch(['app/assets/js/**/*.js', '!app/assets/js/main.js'], scripts);
 	watch(['app/*.html']).on('change', browserSync.reload);
-	watch('app/assets/img/**.svg', svgSprites);
+	watch('app/assets/img/icons/svg/*.svg', svgSprites);
 }
 
 exports.styles = styles;
