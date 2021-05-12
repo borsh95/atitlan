@@ -24,8 +24,22 @@ FONT FAMILY
 @include font-face('Jost', 700, '../../fonts/', 'Jost-Bold');
 @include font-face('Montserrat Alternates', 200, '../../fonts/', 'MontserratAlternates-ExtraLight');
 @include font-face('Montserrat Alternates', 400, '../../fonts/', 'MontserratAlternates-Regular');
+@include font-face('Montserrat Alternates', 500, '../../fonts/', 'MontserratAlternates-Medium');
 @include font-face('Montserrat Alternates', 600, '../../fonts/', 'MontserratAlternates-SemiBold');
 @include font-face('Montserrat Alternates', 700, '../../fonts/', 'MontserratAlternates-Bold');
+
+font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('../../fonts/MontserratAlternates-ExtraLightItalic.eot');
+    src: url('../../fonts/MontserratAlternates-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/MontserratAlternates-ExtraLightItalic.woff2') format('woff2'),
+        url('../../fonts/MontserratAlternates-ExtraLightItalic.woff') format('woff'),
+        url('../../fonts/MontserratAlternates-ExtraLightItalic.ttf') format('truetype'),
+        url('../../fonts/MontserratAlternates-ExtraLightItalic.svg#MontserratAlternates-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
 
 
 

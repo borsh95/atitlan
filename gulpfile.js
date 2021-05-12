@@ -12,6 +12,7 @@ const svgSprite = require('gulp-svg-sprite');
 function svgSprites() {
 	return src('app/assets/img/icons/svg/*.svg')
 		.pipe(svgSprite({
+
 			mode: {
 				stack: {
 					sprite: '../sprite.svg'

@@ -6,7 +6,7 @@
 
 html,
 body {
-    font-weight: var(--fm-1_fw-m);
+    font-weight: 400;
 	font-size: 16px;
 	font-family: var(--fm-1);
     color: var(--color-text);
@@ -29,7 +29,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1410px;
 
 	@include desctop-mid {
 		max-width: 1200px;
@@ -51,15 +51,17 @@ body {
 }
 
 .title-1 {
-	font-weight: var(--fm-1_fw-m);
-	font-size: 48px;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 1.2;
+	font-family: var(--fm-2);
 
 	@include desctop-min {
-		font-size: 38px;
+		font-size: 56px;
 	}
 
 	@include mobile {
-		font-size: 20px;
+		font-size: 32px;
 		line-height: (25/20);
 	}
 }
@@ -74,6 +76,18 @@ body {
 
 	@include mobile {
 		font-size: 18px;
+	}
+}
+
+.title-3 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 34px;
+	font-family: var(--fm-2);
+
+	@include mobile {
+		font-size: 20px;
+		line-height: 1.1;
 	}
 }
 

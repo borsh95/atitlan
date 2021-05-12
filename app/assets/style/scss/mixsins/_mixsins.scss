@@ -1,35 +1,35 @@
 @mixin desctop {
-	@media (max-width: $desctop) {
+	@media (max-width: #{$desctop}px) {
 		@content;
 	}
 }
 
 @mixin desctop-mid {
-	@media (max-width: $desctop-mid) {
+	@media (max-width: #{$desctop-mid}px) {
 		@content;
 	}
 }
 
 @mixin desctop-min {
-    @media (max-width: $desctop-min) {
+    @media (max-width: #{$desctop-min}px) {
         @content;
     }
 }
 
 @mixin table {
-    @media (max-width: $table) {
+    @media (max-width: #{$table}px) {
         @content;
     }
 }
 
 @mixin table-min {
-	@media (min-width: $table + 1) {
+	@media (min-width: #{$table + 1}px) {
 		@content;
 	}
 }
 
 @mixin mobile {
-    @media (max-width: $mobile) {
+    @media (max-width: #{$mobile}px) {
         @content;
     }
 }

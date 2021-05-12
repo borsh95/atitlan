@@ -1,4 +1,650 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 INDEX PAGE	
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.index-page {}
+.index-page {
+
+	@at-root .starting {
+		position: relative;
+		height: 100vh;
+		min-height: 900px;
+
+		&__bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: right top;
+			}
+		}
+
+		&__content {
+			position: absolute;
+			left: 50%;
+			top: 305px;
+			padding: 0 30px;
+			width: 100%;
+			font-size: 48px; 
+			color: var(--color-primary);
+			text-align: center;
+			transform: translateX(-50%);
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 2em;
+			line-height: 1.15em;
+			font-family: var(--fm-2);
+			text-transform: uppercase;
+			text-shadow: 1px 1px 30px rgba(255, 255, 255, 0.05);
+		}
+
+		&__subtitle {
+			margin-top: 30px;
+			font-weight: 500;
+			font-size: 1em;
+			line-height: 1.21em;
+			font-family: var(--fm-1);
+		}
+
+		@include desctop-mid {
+			min-height: 800px;
+
+			&__content {
+				font-size: 36px;
+			}
+		}
+
+		@include desctop-min {
+			min-height: 750px;
+
+			&__content {
+				top: 280px;
+				font-size: 36px;
+			}
+		}
+
+		@include table {
+			min-height: 600px;
+
+			&__content {
+				top: 200px;
+				font-size: 36px;
+			}
+
+			&__title {
+				font-weight: 500;
+				color: var(--color-secondary);
+			}
+		}
+
+		@include mobile {
+			min-height: 500px;
+
+			&__content {
+				top: 180px;
+				font-size: 4.8vw;
+			}
+		}
+	}
+
+	@at-root .utp {
+		font-size: 20px;
+
+		&__container {
+			display: flex;
+		}
+
+		&__aside {
+			padding: 228px 110px 49px 229px;
+			font-family: var(--fm-2);
+			color: #FFFFFF;
+			background-color: var(--color-primary);
+
+			span:first-child {
+				font-weight: 600;
+				font-size: 17.5em;
+				line-height: 1;
+			}
+			span:last-child {
+				display: block;
+				margin-top: 1.25em;
+				font-weight: 500;
+				font-size: 3.2em;
+				line-height: 92px;
+			}
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			column-gap: 90px;
+			row-gap: 80px;
+			padding: 85px 0 85px 110px;
+		}
+
+		&__item {
+			position: relative;
+			padding: 21.81% 0 7.27% 21.81%;
+			width:  275px;
+			min-height: 15em;
+
+			&::before {
+				content: attr(data-label);
+				position: absolute;
+				z-index: -1;
+				top: 1.4%;
+				left: -20%;
+				font-weight: 600;
+				font-size: 14.4em;
+				font-family: var(--fm-2);
+				line-height: 1;
+				color: rgba(34, 144, 185, 0.03);
+				transform: rotate(-90deg);
+			}
+
+			&-number {
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-weight: 600;
+				font-family: var(--fm-2);
+				font-size: 3.2em;
+				line-height: 1;
+				color: rgba(34, 144, 185, 0.2);
+				transform: rotate(-90deg);
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: 8px;
+					right: calc(100% + 20px);
+					width: 2.65em;
+					height: 0.08em;
+					background-color: var(--color-primary);
+				}
+			}
+
+			&-text {
+				margin-top: 1.1em;
+				font-weight: 500;
+				font-size: 1em;
+				line-height: (24/20);
+				text-align: center;
+			}
+
+			&-ic {
+				margin: 0 auto;
+				
+			}
+
+			&:nth-of-type(1) &-ic {
+				width: 3.2em;
+				height: 3.2em;
+			}
+			&:nth-of-type(2) &-ic {
+				width: 3em;
+				height: 3em;
+			}
+			&:nth-of-type(3) &-ic {
+				width: 3.253em;
+				height: 3.25em;
+			}
+			&:nth-of-type(4) &-ic {
+				width: 3.35em;
+				height: 3.35em;
+			}
+			&:nth-of-type(5) &-ic {
+				width: 3.6em;
+				height: 2.8em;
+			}
+			&:nth-of-type(6) &-ic {
+				width: 2.9em;
+				height: 2.55em;
+			}
+			&:nth-of-type(7) &-ic {
+				width: 3.25em;
+				height: 3.25em;
+			}
+			&:nth-of-type(8) &-ic {
+				width: 4.6em;
+				height: 4.45em;
+			}
+			&:nth-of-type(9) &-ic {
+				width: 2.85em;
+				height: 3.22em;
+			}
+		}
+
+		
+		@include desctop {
+			font-size: 1.04vw;
+	
+			&__aside {
+				padding: 11.8% 5.7% 2.6% 11.9%;
+	
+				span:last-child {
+					margin-top: 1.3vw;
+					line-height: 4.79vw;
+				}
+			}
+	
+			&__list {
+				column-gap: 4.68vw;
+				row-gap: 4.16vw;
+				padding: 4.42vw 0 4.42vw 5.72vw;
+			}
+	
+			&__item {
+				width:  rubberSize(210, 285, $table, $desctop);
+			}
+		}
+
+		@include desctop-mid {
+			&__list {
+				column-gap: 2.22vw;
+				row-gap: 30px;
+				padding: 4.42vw 0 4.42vw 5.72vw;
+			}
+
+			&__item {
+				font-size: 14px;
+			}
+		}
+
+		@include desctop-min {
+			&__item {
+				font-size: 14px;
+			}
+		}
+
+		@include table {
+			font-size: 18px;
+
+			&__container {
+				flex-direction: column;
+			}
+
+			&__aside {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 80px 20px;
+
+				span {
+					&:first-child {
+						margin: -4px 40px -40px 0;
+					}
+					&:last-child {
+						font-size: 2.4em;
+						line-height: 1.4em;
+					}
+				}
+			}
+
+			&__list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				column-gap: 0;
+				row-gap: 0;
+				margin: 0 0 -40px -30px;
+				padding: 45px 50px;
+			}
+
+			&__item {
+				margin: 0 0 40px 30px;
+				padding: 52px 0 17.5px 52px;
+				width: 240px;
+				min-height: 220px;
+			}
+		}
+
+		@include mobile {
+			font-size: 16px;
+
+			&__aside {
+				padding: 50px 10px;
+
+				span {
+					&:first-child {
+						margin: 0px 20px -27px 0;
+   						font-size: 14em;
+					}
+					&:last-child {
+						font-size: 1.8em;
+						line-height: 1.4em;
+					}
+				}
+			}
+
+			&__list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				column-gap: 0;
+				row-gap: 0;
+				margin: 0 0 -40px -30px;
+				padding: 45px 50px;
+			}
+
+			&__item {
+				margin: 0 0 40px 30px;
+				padding: 0 0 17.5px 25px;
+				width: 240px;
+				min-height: 220px;
+				font-size: 16px;
+
+				&::before {
+					display: none;
+				}
+
+				&-number {
+					top: 25px;
+					font-size: 2.5em;
+
+					&:after {
+						right: calc(100% + 10px);
+						width: 2.1em;
+					}
+				}
+
+				&-text {
+					margin-top: 3em;
+				}
+			}
+		}
+	}	
+
+	&__services {
+		margin-top: 84px;
+	}
+
+	&__calculator {
+		margin-top: 200px;
+	}
+
+	&__tablets {
+		margin-top: 32px;
+	}
+
+	@include desctop-mid {
+		&__services {
+			margin-top: 70px;
+		}
+
+		&__calculator {
+			margin-top: 150px;
+		}
+	}
+
+	@include table {
+		&__services {
+			margin-top: 60px;
+		}
+		
+		&__calculator {
+			margin-top: 110px;
+		}
+	}
+
+	@include mobile {
+		&__services {
+			margin-top: 45 px;
+		}
+
+		&__calculator {
+			margin-top: 70px;
+		}
+
+		&__tablets {
+			display: none;
+		}
+	}
+}
+
+/*BLOCKS INDEX PAGE*/
+/*servises*/
+.services {
+	position: relative;
+	padding: 99px 0 240px;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+
+		&-left {
+			position: absolute;
+			top: 232px;
+			left: 0;
+			bottom: 0;
+			width: 47.6%;
+			background: #DEEEF5;
+		}
+
+		&-right {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 48.8%;
+			height: 88.6%;
+			background: #F1FAFE;
+		}
+
+		&-right::before,
+		&-left::before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			display: block;
+			background: url(../../img/icons/points-bg.png) no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+
+		&-right::before {
+			top: 105px;
+			right: 16%;
+			width: 104px;
+			height: 97px;
+		}
+
+		&-left::before {
+			bottom: -23px;
+			left: 36.6%;
+			width: 165px;
+			height: 164px;
+		}
+	}
+
+	@media (min-width: #{$desctop-min}px) {
+		&__container {
+			max-width: 1127px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 117px;
+		text-align: center;
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 -37px -40px;
+	}
+
+	@at-root .service-card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 37px 40px;
+		padding: 31px 11px 19px; 
+		min-height: 354px;
+		width: calc(33.33% - 40px);
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 10px 25px 50px rgba(110, 146, 159, 0.2);
+
+		&__title,
+		&__text {
+			/* autoprefixer: off */
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			/* autoprefixer: on */
+			overflow: hidden;
+		}
+
+		&__title {
+			text-align: center;
+			-webkit-line-clamp: 5;
+		}
+
+		&__text,
+		&__btn {
+			position: absolute;
+		}
+
+		&__text {
+			top: 204px;
+			left: 45px;
+			right: 39px;
+			bottom: 45px;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: (28/18);
+			color: #7D7987;
+			-webkit-line-clamp: 4;
+		}
+
+		&__btn {
+			right: 17px;
+			bottom: 12px;
+			box-sizing: content-box;
+			padding: 10px;
+		}
+	}
+
+	@include desctop-min {
+		padding: 70px 0 170px;
+
+		&__bg {
+			&-left {
+				top: 165px;
+			}
+
+			&-right::before {
+				top: 105px;
+				right: 16%;
+				width: 104px;
+				height: 97px;
+			}
+	
+			&-left::before {
+				bottom: -23px;
+				left: 36.6%;
+				width: 165px;
+				height: 164px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 80px;
+		}
+	}
+
+	@include table {
+		&__bg {
+			&-left {
+				position: absolute;
+				top: 0;
+				width: 68.14%;
+			}
+
+			&-right {
+				top: 88px;
+				bottom: 68px;
+				z-index: -2;
+				height: auto;
+			}
+
+			&-right::before,
+			&-left::before {
+				display: none;
+			}
+		}
+
+		@at-root .service-card {
+			width: calc(50% - 40px);
+		}
+	}
+
+	@include mobile {
+		padding: 55px 0 120px;
+
+		&__bg {
+			&-right {
+				top: 60px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__cards {
+			justify-content: center;
+		}
+
+		@at-root .service-card {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin: 0 0 37px 40px;
+			padding: 25px 11px 19px; 
+			min-height: 250px;
+			max-width: 300px;
+			min-width: 270px;
+			border-radius: 13px;
+	
+			&__title {
+				-webkit-line-clamp: 4;
+			}
+	
+			&__text {
+				top: 115px;
+				left: 20px;
+				right: 20px;
+				bottom: 50px;
+				font-size: 14px;
+			}
+
+		}
+	}
+}
+
+/*tablets*/
+.tablets {
+	.accardion {
+		&__item-header {
+			text-indent: -10px;
+		}
+		&__item-list {
+			padding: 0 2px;
+			overflow-x: auto;
+		}
+	}
+
+	.table {
+		min-width: 900px;
+	}
+}
+

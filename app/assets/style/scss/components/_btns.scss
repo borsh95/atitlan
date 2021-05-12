@@ -1,3 +1,88 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 COMMON BUTTON
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+%baseOption {
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	font-weight: 300;
+	align-items: center;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	transition: all $duration;
+}
+
+.btn-arr {
+	@extend %baseOption;
+	width: 28px;
+	height: 18px;
+
+	use {
+		fill: #2290B9;
+		transition: fill $duration;
+	}
+
+	&:hover use {
+		fill: #3F3F3F;
+	}
+}
+
+.btn-type-1 {
+	@extend %baseOption; 
+	position: relative;
+	z-index: 1;
+	align-items: center;
+	padding:  0 1.166em 0 1.29em;
+	height: 2.958em;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1;
+	box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.3);
+	border-radius: 0.333em;
+	overflow: hidden;
+
+	&:hover::before {
+		opacity: 1;
+	}
+
+	&:hover::after {
+		opacity: 0;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		display: block;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 101%;
+		transition: opacity $duration ease-in;
+	}
+
+	&::after {
+		background: linear-gradient(88.07deg, #FFFFFF -3.95%, #CFF2FF 93.58%);
+	}
+
+	&::before {
+		background: linear-gradient(88.07deg, #79ADB8 -3.95%, #9DE4FF 93.58%);
+		opacity: 0;
+	}
+	
+	svg {
+		margin: 0 0 -3px 20px;
+		width: 28px;
+		height: 18px;
+	}
+
+	@include table {
+		font-size: 20px;
+	}
+
+	@include mobile {
+		font-size: 16px;
+	}
+}

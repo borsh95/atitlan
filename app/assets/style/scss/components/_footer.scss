@@ -37,8 +37,9 @@ footer {
 		}
 
 		&__logo-wrap,
+		&__col,
 		&__contacts-ics {
-			padding-top: 50px;
+			padding: 50px 0 38px;
 		}
 
 		&__contacts-ics {
@@ -46,7 +47,7 @@ footer {
 			margin-left: auto;
 		}
 
-		&__top {
+		&__top .b-container {
 			display: flex;
 		}
 
@@ -58,7 +59,6 @@ footer {
 		&__col {
 			display: flex;
 			flex-direction: column;
-			padding: 50px 0 38px;
 
 			&:not(:first-child) {
 				margin-left: 110px;
@@ -91,6 +91,7 @@ footer {
 			&::before {
 				content: '';
 				position: absolute;
+				top: 0;
 				left: 0;
 				right: 0;
 				border-top: $border;
@@ -109,7 +110,7 @@ footer {
 	}
 
 	@include desctop-mid {
-		.#{&} {
+		@at-root .#{&} {
 			&__logo-wrap,
 			&__contacts-ics,
 			&__lav,
@@ -118,14 +119,9 @@ footer {
 			}
 
 			&__logo-wrap,
-			&__content,
+			&__col,
 			&__contacts-ics {
-				padding-top: 35px;
-			}
-
-			&__content {
-				display: flex;
-				padding: 40px 50px 30px;
+				padding: 35px 0 30px;
 			}
 
 			&__col {
@@ -154,10 +150,38 @@ footer {
 	}
 
 	@include table {
-		.#{&} {
+		.b-container {
+			padding: 0 30px;
+		}
+
+		.contacts-ics__item {
+			margin-bottom: 17px !important;
+			max-width: 30px;
+			height: 33px;
+		}
+
+		@at-root .#{&} {
 			&__logo-wrap,
 			&__lav {
 				border-right: none;
+			}
+
+			&__logo-wrap,
+			&__contacts-ics,
+			&__lav,
+			&__ArtBro {
+				width: auto;
+				text-align: left;
+			}
+
+			&__logo-wrap,
+			&__col,
+			&__contacts-ics {
+				padding: 0;
+			}
+
+			&__logo-wrap {
+				padding-bottom: 30px;
 			}
 	
 			&__contacts-ics,
@@ -166,7 +190,102 @@ footer {
 			}
 
 			&__top {
+				.b-container {
+					flex-direction: column;
+					padding: 35px 30px 28px;
+				}
+			}
+
+			&__content {
+				position: relative;
+				padding-top: 35px;
+			}
+
+			&__content::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -30px;
+				right: -30px;
+				border-top: 1px solid rgba(255, 255, 255, 0.7);
+			}
+
+			&__bottom {
+				padding: 35px 0 30px;
+
+				.b-container {
+					display: flex;
+					justify-content: space-between;
+				}
+	
+				&-item {
+					display: block;
+					padding: 0;
+	
+					&:nth-child(2) {
+						margin-left: 0;
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		@at-root .#{&} {
+			&__logo {
+				font-size: 22px;
+			}
+
+			&__content {
+				display: grid;
+			}
+
+			&__contacts-ics {
+				position: absolute;
+				top: 35px;
+				right: 0;
+			}
+
+			&__col {
+				display: flex;
 				flex-direction: column;
+				max-width: 85%;
+	
+				&:not(:first-child) {
+					margin-left: 0;
+					margin-top: 25px;
+				}
+				
+				&-item {
+					margin-top: 25px;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: (26/18);
+	
+					&:nth-of-type(1) {
+						margin-top: 0;
+					}
+				}
+	
+				&-text {
+					font-weight: 300;
+					line-height: 2;
+				}
+			}
+
+			&__bottom {
+				.b-container {
+					flex-wrap: wrap;
+				}
+
+				&-item:first-child {
+					width: 100%;
+				}
+
+				&-item:not(:first-child) {
+					margin-top: 20px;
+				}
 			}
 		}
 	}

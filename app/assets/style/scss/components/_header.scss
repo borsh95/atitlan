@@ -5,8 +5,11 @@ header {
 	$bg-color-sub-menu: #6E96B6;
 	$color-link--hover: #000;
 
-	position: relative;
+	position: absolute;
+	left: 0;
+	left: 0;
 	padding: 27px 0 0;
+	width: 100%;
 	z-index: 100;
 	background: rgba(0, 98, 135, 0.45);
 	
@@ -87,17 +90,18 @@ header {
 			&__item-link,
 			a {
 				color:#fff;
+
+				&:focus {
+					outline: 2px solid black;
+				}
 			}
 	
 			&__item {
 				position: relative;
 				padding: 21px 20px 24px;
-				transition: background-color $duration $delay;
 		
 				&:hover {
-					background-color: $bg-color-sub-menu;
-
-					.sub-menu {
+				.sub-menu {
 						opacity: 1;
 						pointer-events: all;
 					}

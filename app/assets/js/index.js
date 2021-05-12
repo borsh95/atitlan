@@ -28,10 +28,63 @@ function burgerMenu() {
 	}
 }
 
-document.querySelectorAll('[data-dropdown="wrapp"]').forEach(el => {
-	dropdownList(el);
-})
+if (isElem('[data-dropdown="wrapp"]')) {
+	document.querySelectorAll('[data-dropdown="wrapp"]').forEach(el => {
+		dropdownList(el);
+	})
+}
 
+const accardionTables = accardion()();
+accardionTables.init('.accardion');
+
+function accardion() {
+	return function () {
+		let _mainElement = {}, // .accordion
+			_items = {}; // .accordion-item
+
+		return {
+			init: function (element) {
+				_mainElement = (typeof element === 'string' ? document.querySelector(element) : element);
+				_items = _mainElement.querySelectorAll('.accardion__item');
+				_setupListeners(_mainElement, 'click', _clickHandler);
+			}
+		}
+
+		function _clickHandler(e) {
+			if (!e.target.closest('.accardion__item-arrow')) {
+				return;
+			}
+			e.preventDefault(); // отменям стандартное действие
+			// получаем необходимые данные
+			let header = e.target.closest('.accardion__item-header'),
+				item = header.closest('.accardion__item'),
+				itemActive = _getItem(_items, 'open');
+
+			if (itemActive === undefined) {
+				item.classList.add('open');
+			} else {
+				itemActive.classList.remove('open');
+
+				if (itemActive !== item) item.classList.add('open');
+			}
+		}
+	}
+
+	function _setupListeners(elem, event, handler) {
+		// добавим к элементу аккордиона обработчик события click
+		elem.addEventListener(event, handler);
+	}
+
+	function _getItem(elements, className) { // функция для получения элемента с указанным классом
+		var element = undefined;
+		elements.forEach(function (item) {
+			if (item.classList.contains(className)) {
+				element = item;
+			}
+		});
+		return element;
+	};
+}
 //Выпадающий список
 function dropdownList(dropWrappEl) {
 	const dropdownList = dropWrappEl.querySelector('[data-dropdown="list"]');
@@ -50,5 +103,9 @@ function dropdownList(dropWrappEl) {
 	return {
 		toggleDropdown
 	}
+}
+
+function isElem(selector) {
+	return (document.querySelector(selector)) ? true : false;
 }
 
