@@ -37,6 +37,23 @@ if (isElem('[data-dropdown="wrapp"]')) {
 const accardionTables = accardion()();
 accardionTables.init('.accardion');
 
+if (isElem('.slider-stages')) {
+	let sliderStages = new Swiper(".slider-stages", {
+		effect: "fade",
+		navigation: {
+			nextEl: ".slider-stages-next",
+			prevEl: ".slider-stages-prev",
+		},
+		pagination: {
+			el: ".slider-stages-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
+		},
+	});
+}
+
 function accardion() {
 	return function () {
 		let _mainElement = {}, // .accordion

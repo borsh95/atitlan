@@ -9,7 +9,7 @@ body {
     font-weight: 400;
 	font-size: 16px;
 	font-family: var(--fm-1);
-    color: var(--color-text);
+    color: #3f3f3f;
 }
 
 .global-wrap {
@@ -92,8 +92,8 @@ body {
 }
 
 .text {
-	line-height: (30/18);
 	font-size: 18px;
+	line-height: (27/18);
 
 	@include mobile {
 		line-height: (24/16);
