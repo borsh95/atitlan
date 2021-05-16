@@ -9,6 +9,7 @@ VARIABLES
 	--fm-2: "Jost", sans-serif;
 
 	/*pallete*/
+	--blue-50: #F7F9FC;
 	--blau-300: #2290B9;
 	--blau-400: #3179BC;
 
@@ -16,6 +17,8 @@ VARIABLES
 
 	--color-primary: var(--blau-300);
 	--color-secondary: var(--blau-400);
+
+	--color-bg-ligBlue: var(--blue-50);
 }
 
 //********** scss variablse	********** 

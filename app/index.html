@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="ArtBro">
 	<title>Главная</title>
+	<!-- yandex map -->
+	<script src="https://api-maps.yandex.ru/2.1/?275f97ae-788c-4c42-ac7e-e3a834f55d00&lang=ru_RU"
+		type="text/javascript"></script>
 	<!-- swiper.min.css -->
 	<link rel="stylesheet" href="./assets/style/css/libraries/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/style/css/style.css">
@@ -214,7 +217,7 @@
 									<use xlink:href="./assets/img/sprite.svg#utp_ic-7"></use>
 								</svg>
 							</div>
-							<div class="utp__item-text">Доставка собственным транспортом по Республике Беларусь
+							<div class="utp__item-text">Поэтапное <br> строительство
 							</div>
 						</div>
 						<div class="utp__item" data-label="08">
@@ -224,7 +227,8 @@
 									<use xlink:href="./assets/img/sprite.svg#utp_ic-8"></use>
 								</svg>
 							</div>
-							<div class="utp__item-text">Выбор из 100 моделей бассейнов</div>
+							<div class="utp__item-text">Доставка собственным транспортом по Республике Беларусь
+							</div>
 						</div>
 						<div class="utp__item" data-label="09">
 							<div class="utp__item-number">09</div>
@@ -233,7 +237,7 @@
 									<use xlink:href="./assets/img/sprite.svg#utp_ic-9"></use>
 								</svg>
 							</div>
-							<div class="utp__item-text">Гибкость предложений</div>
+							<div class="utp__item-text">Выбор из 100 моделей бассейнов</div>
 						</div>
 					</div>
 				</div>
@@ -358,7 +362,7 @@
 							<div class="calc-form__b-input b-input">
 								<div class="b-input__title">Ваш телефон</div>
 								<div class="input">
-									<input type="tel" name="tel" placeholder="8077">
+									<input type="tel" name="tel" placeholder="+375">
 								</div>
 							</div>
 							<div class="calc-form__b-input b-input">
@@ -688,7 +692,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- slider -->
+			<!-- stages -->
 			<section class="index-page__stages stages">
 				<div class="stages__bg">
 					<picture>
@@ -853,11 +857,216 @@
 					</div>
 				</div>
 			</section>
+			<!-- portfolio -->
+			<section class="index-page__portfolio portfolio">
+				<div class="portfolio__container container">
+					<h3 class="portfolio__title title-1">Портфолио</h3>
+					<div class="portfolio__list">
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-1.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-2.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-3.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-4.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-5.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-6.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-7.jpg)"></div>
+						<div class="portfolio__card"
+							style="background-image: url(./assets/img/pages/index/portfolio/img-8.jpg)"></div>
+					</div>
+					<a class="portfolio__btn btn-type-1" href="#">
+						<span>Смотреть все работы</span>
+						<svg style="fill: #3f3f3f;">
+							<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<!-- blog -->
+			<div class="section index-page__blog blog">
+				<div class="blog__container container">
+					<div class="blog__title title-1">Блог</div>
+					<!-- blog cards -->
+					<div class="blog__list">
+						<article class="blog__blog-card blog-card">
+							<div class="blog-card__img"
+								style="background-image: url(./assets/img/pages/index/blog/img-1.jpg)"></div>
+							<div class="blog-card__textBox">
+								<h5 class="blog-card__title">
+									Disease detection, check
+									up in the laboratory
+								</h5>
+								<p class="blog-card__text">In this case, the role of the health laboratory is very
+									important to do
+									a disease detection...</p>
+								<a class="blog-card__btn btn-txt" href="#">
+									<span>Подробнее</span>
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="blog__blog-card blog-card">
+							<div class="blog-card__img"
+								style="background-image: url(./assets/img/pages/index/blog/img-2.jpg)"></div>
+							<div class="blog-card__textBox">
+								<h5 class="blog-card__title">
+									Herbal medicines that are
+									safe for consumption Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+									suscipit!
+								</h5>
+								<p class="blog-card__text">Herbal medicine is very widely used at this time because of
+									its very good for your health...</p>
+								<a class="blog-card__btn btn-txt" href="#">
+									<span>Подробнее</span>
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+									</svg>
+								</a>
+							</div>
+						</article>
+						<article class="blog__blog-card blog-card">
+							<div class="blog-card__img"
+								style="background-image: url(./assets/img/pages/index/blog/img-3.jpg)"></div>
+							<div class="blog-card__textBox">
+								<h5 class="blog-card__title">
+									Natural care for healthy
+									facial skin
+								</h5>
+								<p class="blog-card__text">A healthy lifestyle should start from now and also for your
+									skin health.
+									There are some....</p>
+								<a class="blog-card__btn btn-txt" href="#">
+									<span>Подробнее</span>
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+									</svg>
+								</a>
+							</div>
+						</article>
+					</div>
+					<a class="blog__btn btn-type-2" href="#">
+						<span>Читать</span>
+						<svg style="fill: #fff;">
+							<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<!-- contacts -->
+			<section class="index-page__contacts contacts">
+				<div class="contacts__container">
+					<h3 class="contacts__title title-1">Контакты</h3>
+					<div class="contacts__row">
+						<div class="container flex">
+							<!-- left col -->
+							<div class="contacts__textBox contacts__col">
+								<article class="contact">
+									<h6 class="contact__title title-3">Время работы</h6>
+									<p class="contact__text">Пн - Пт с 10:00 до 19:00</p>
+									<p class="contact__text">Сб - Вс — выходные</p>
+								</article>
+								<article class="contact">
+									<h6 class="contact__title title-3">Адрес</h6>
+									<p class="contact__text">г.&nbsp;Минск, ул.&nbsp;Томская, д.&nbsp;65, к.&nbsp;2,
+										офис&nbsp;2Н</p>
+								</article>
+								<article class="contact">
+									<h6 class="contact__title title-3">Телефоны</h6>
+									<p class="contact__text">+&nbsp;375&nbsp;(29)&nbsp;332-87-00;
+										+&nbsp;375&nbsp;(29)&nbsp;562-72-73</p>
+									<p class="contact__text">Отдел продаж: +&nbsp;375&nbsp;(17)&nbsp;303-66-03</p>
+								</article>
+								<div class="contact">
+									<p class="contact__text contact__text--with-ic vt-center">
+										<svg>
+											<use xlink:href="./assets/img/sprite.svg#contact-mail-ic"></use>
+										</svg>
+										<a href="mailto:infoatl2202@mail.ru">
+											<span>E-mail: infoatl2202@mail.ru</span>
+										</a>
+									</p>
+									<p class="contact__text contact__sci flex">
+										<a href="#">
+											<svg>
+												<use xlink:href="./assets/img/sprite.svg#contact-f-ic"></use>
+											</svg>
+										</a>
+										<a href="#">
+											<svg>
+												<use xlink:href="./assets/img/sprite.svg#contact-viber-ic"></use>
+											</svg>
+										</a>
+										<a href="#">
+											<svg>
+												<use xlink:href="./assets/img/sprite.svg#contact-inst-ic"></use>
+											</svg>
+										</a>
+									</p>
+								</div>
+							</div>
+							<!-- right col -->
+							<div class="contacts__map-wrap contacts__col">
+								<div class="contacts__map-title title-3">Мы на карте:
+								</div>
+								<div id="map"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- application -->
+			<div class="index-page__b-application b-application">
+				<!-- bg -->
+				<div class="b-application__bg">
+					<picture>
+						<source srcset="./assets/img/components/b-application/b-application__bg.webp" type="image/webp"
+							media="(min-width: 1125px)">
+						<source srcset="./assets/img/components/b-application/b-application__bg@mob.jpg">
+						<img src="./assets/img/components/b-application/b-application__bg.jpg"
+							srcset="./assets/img/components/b-application/b-application__bg@2x.jpg 2x" alt="Фон">
+					</picture>
+				</div>
+				<div class="b-application__container container flex">
+					<!-- text box -->
+					<div class="b-application__textBox">
+						<div class="b-application__subtitle">Остались вопросы?</div>
+						<h3 class="b-application__title">Оставьте заявку!</h3>
+						<p class="b-application__text">И наш менеджер отвветит на интересующие вас вопросы в ближайшее
+							время!</p>
+					</div>
+					<!-- application form -->
+					<form action="#" class="b-application__application-form application-form">
+						<div class="b-input">
+							<input type="text" name="firstname" placeholder="Имя:">
+						</div>
+						<div class="b-input">
+							<input type="tel" name="tel" placeholder="Телефон:">
+						</div>
+						<div class="b-input">
+							<input type="email" name="email" placeholder="Почта:">
+						</div>
+						<button class="application-form__btn btn-type-1" type="submit" aria-label="Расчитать">
+							<span>Отпавить</span>
+							<svg style="fill: #3f3f3f;">
+								<use xlink:href="./assets/img/sprite.svg#btn-arr"></use>
+							</svg>
+						</button>
+						<p class="application-form__confirmation text">
+							*Отправляя заявку, Вы соглашаетесь на обработку <a href="#">персональных данных</a>
+						</p>
+					</form>
+				</div>
+			</div>
 		</main>
-
 		<!-- FOOTER -->
 		<footer>
-
 			<!-- footer top -->
 			<div class="footer__top">
 				<div class="b-container">
@@ -920,6 +1129,8 @@
 			</div>
 		</footer>
 	</div>
+	<!-- input mask -->
+	<script src="./assets/js/libraries/inputMask.min.js"></script>
 	<!-- swiper.min.js -->
 	<script src="assets/js/libraries/swiper-bundle.min.js"></script>
 	<script src="assets/js/main.js"></script>

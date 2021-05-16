@@ -10,6 +10,21 @@ body {
 	font-size: 16px;
 	font-family: var(--fm-1);
     color: #3f3f3f;
+	scrollbar-color: var(--color-primary) rgba(255,255,255,0);     /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: auto;  /* толщина */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 1rem; /* ширина для вертикального скролла */
+    height: 1rem; /* высота для горизонтального скролла */
+    background-color: rgba(255,255,255,0);
+}
+
+html::-webkit-scrollbar-thumb, 
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+	border-radius: 0.5em;
 }
 
 .global-wrap {
@@ -57,7 +72,11 @@ body {
 	font-family: var(--fm-2);
 
 	@include desctop-min {
-		font-size: 56px;
+		font-size: 52px;
+	}
+
+	@include desctop-min {
+		font-size: 42px;
 	}
 
 	@include mobile {
@@ -75,7 +94,19 @@ body {
 	}
 
 	@include mobile {
-		font-size: 18px;
+		font-size: 24px;
+	}
+}
+
+.title-3 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 34px;
+	font-family: var(--fm-2);
+
+	@include mobile {
+		font-size: 20px;
+		line-height: 1.1;
 	}
 }
 
@@ -108,3 +139,6 @@ body {
 
 /*--------------------------------Other--------------------------------*/
 @import "./pages/index";
+@import "./pages/about-us";
+@import "./pages/blog";
+@import "./pages/blog-note";

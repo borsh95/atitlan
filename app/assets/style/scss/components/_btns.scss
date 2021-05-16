@@ -28,18 +28,46 @@ COMMON BUTTON
 	}
 }
 
-.btn-type-1 {
-	@extend %baseOption; 
+.btn-txt {
+	@extend %baseOption;
+	font-weight: 600;
+	font-size: 18px;
+	color: var(--color-primary);
+	transition: color $duration;
+
+	svg {
+		margin: 0 0 -0.1em 1em;
+		width: 0.98em;
+		height: 0.624em;
+		fill: var(--color-primary);
+		transition: fill $duration;
+	}
+
+	&:hover {
+		color: #3f3f3f;
+		
+		svg {
+			fill: #3f3f3f;
+		}
+	}
+
+	&--prev {
+		svg {
+			margin: 0 1em -0.1em 0;
+			width: 0.98em;
+			transform: scaleX(-1);
+		}
+	}
+
+	@include table {
+		font-size: 16px;
+	}
+}
+
+%btn-type {
 	position: relative;
 	z-index: 1;
 	align-items: center;
-	padding:  0 1.166em 0 1.29em;
-	height: 2.958em;
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 1;
-	box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.3);
-	border-radius: 0.333em;
 	overflow: hidden;
 
 	&:hover::before {
@@ -63,6 +91,22 @@ COMMON BUTTON
 		transition: opacity $duration ease-in;
 	}
 
+	svg {
+		flex-shrink: 0;
+	}
+}
+
+.btn-type-1 {
+	@extend %baseOption; 
+	@extend %btn-type;
+	padding:  0 1.166em 0 1.29em;
+	height: 2.958em;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1;
+	box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.3);
+	border-radius: 0.333em;
+
 	&::after {
 		background: linear-gradient(88.07deg, #FFFFFF -3.95%, #CFF2FF 93.58%);
 	}
@@ -73,9 +117,13 @@ COMMON BUTTON
 	}
 	
 	svg {
-		margin: 0 0 -3px 20px;
-		width: 28px;
-		height: 18px;
+		margin: 0 0 -0.125em 0.83em;
+		width: 1.66em;
+		height: 0.75em;
+	}
+
+	@include desctop-min {
+		font-size: 22px;
 	}
 
 	@include table {
@@ -86,3 +134,50 @@ COMMON BUTTON
 		font-size: 16px;
 	}
 }
+
+.btn-type-2 {
+	@extend %baseOption; 
+	@extend %btn-type;
+	padding:  0 1em 0 1.96em;
+	height: 2.85em;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1;
+	color: #fff;
+	box-shadow: 0px 0.166em 1.5em rgba(34, 144, 185, 0.5);
+	border-radius: 0.416em;
+
+	&::after,
+	&::before {
+		transition: none;
+	}
+
+	&::after {
+		background: linear-gradient(86.78deg, #2E91B7 -16.6%, #2FA4CF 115.84%);
+	}
+
+	&::before {
+		background: linear-gradient(86.78deg, #025372 -16.6%, #009FDB 115.84%);
+		opacity: 0;
+	}
+	
+	svg {
+		margin: 0 0 -0.125em 0.83em;
+		width: 1.66em;
+		height: 0.75em;
+	}
+
+	@include desctop-min {
+		font-size: 22px;
+	}
+
+	@include table {
+		font-size: 20px;
+	}
+
+	@include mobile {
+		font-size: 16px;
+	}
+}
+
+

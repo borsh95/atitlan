@@ -1,0 +1,222 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+ABOUT US PAGE	
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.about-us-page {
+	h1 {
+		margin-bottom: 81px;
+	}
+
+	main {
+		padding-bottom: 75px;
+	}
+
+	@include desctop-min {
+		h1 {
+			margin-bottom: 60px;
+		}
+	
+		main {
+			padding-bottom: 60px;
+		}
+	}
+}
+
+/*blocks*/
+.b-about-us {
+	&__container {
+		align-items: center;
+	}
+
+	&__article {
+		$this: &;
+		align-items: flex-start;
+		justify-content: space-between;
+	
+		&-text {
+			padding: 0 70px 0 0;
+			font-size: 24px;
+			line-height: (36/24);
+			text-align: justify;
+		}
+	
+		&-img {
+			position: relative;
+			flex-shrink: 0;
+			width: 40%;
+			border-radius: 15px;
+			background-repeat: no-repeat;
+			background-size: cover;
+	
+			&::before {
+				content: "";
+				display: block;
+				padding-bottom: 73.15%;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -6.95%;
+				left: -4.73%;
+				z-index: -1;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: rgba(109, 215, 255, 0.15);
+				border-radius: inherit;
+			}
+		}
+
+		&--rtl {
+			position: relative;
+			#{$this}-text {
+				order: 1;
+				padding: 0 0 0 70px;
+			}
+			#{$this}-img {
+				margin-top: 25px;
+			}
+
+			&:before {
+				position: absolute;
+				bottom: -80px;
+				left: -95px;
+				z-index: -1;
+				content: '';
+				display: block;
+				width: 119px;
+				height: 115px;
+				background: url(./../../img/icons/points-bg--type-2.png) no-repeat;
+				background-size: contain;
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+	&__tagging {
+		margin: 45px 0;
+		padding: 46px 45px 44px;
+		max-width: 990px;
+		font: italic 500 24px/(29/24) var(--fm-1);
+		text-align: center;
+		color: #555555;
+		border-radius: 20px;
+
+		&--selected {
+			margin-top: 73px;
+			line-height: (36/24);
+			color: #fff;
+			background-color: var(--color-primary);
+			box-shadow: 14px -14px 28px rgba(33, 140, 179, 0.2), -14px 14px 28px rgba(33, 140, 179, 0.2), 14px 14px 28px rgba(35, 148, 191, 0.1), -14px -14px 35px rgba(33, 140, 179, 0.1), inset -1px -1px 2px rgba(35, 148, 191, 0.3), inset 1px 1px 2px rgba(33, 140, 179, 0.7);
+		}
+	}
+
+	@include desctop-mid {
+		.b-about-us {
+			&__article {
+				&-text {
+					padding: 0 50px 0 0;
+					font-size: 22px;
+				}
+
+				&--rtl .b-about-us__article-text {
+					padding: 0 0 0 50px;
+				}
+			}
+		}
+
+		&__tagging {
+			margin: 40px 0;
+			padding: 40px;
+			max-width: 800px;
+			font-size: 22px;
+			
+			&--selected {
+				margin-top: 65px;
+			}
+		}
+	}
+	@include desctop-min {
+		.b-about-us {
+			&__article {
+				&-text {
+					padding: 0 40px 0 0;
+					font-size: 18px;
+				}
+
+				&--rtl .b-about-us__article-text {
+					padding: 0 0 0 40px;
+				}
+			}
+		}
+
+		&__tagging {
+			font-size: 18px;
+		}
+	}
+
+	@include table {
+		.b-about-us {
+			&__article {
+				flex-direction: column;
+
+				&-text {
+					padding: 0;
+				}
+
+				&-img {
+					order: -1;
+					align-self: center;
+					margin-bottom: 50px;
+					padding-bottom: 0 20px;
+					max-width: 500px;
+					width: 100%;
+
+					@media (max-width: 580px) {
+						max-width: 92%;
+					}
+				}
+
+				&--rtl {
+					.b-about-us__article-img {
+						margin-top: 0;
+					}
+
+					.b-about-us__article-text {
+						padding: 0;
+					}
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+
+			&__tagging {
+				margin: 0;
+				font-size: 18px;
+
+				&--selected {
+					margin-top: 55px;
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		.b-about-us {
+			&__article {
+				&-text {
+					font-size: 16px;
+				}
+			}
+
+			&__tagging {
+				margin: 30px 0;
+				padding: 20px;
+				font-size: 14px;
+			}
+		}
+		
+	}
+}

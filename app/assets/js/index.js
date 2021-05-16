@@ -40,6 +40,7 @@ accardionTables.init('.accardion');
 if (isElem('.slider-stages')) {
 	let sliderStages = new Swiper(".slider-stages", {
 		effect: "fade",
+		allowTouchMove: false,
 		navigation: {
 			nextEl: ".slider-stages-next",
 			prevEl: ".slider-stages-prev",
@@ -52,6 +53,49 @@ if (isElem('.slider-stages')) {
 			},
 		},
 	});
+}
+
+if (isElem('#map')) {
+	//map 
+	ymaps.ready(init);
+	function init() {
+		// Создание карты.
+		var myMap = new ymaps.Map("map", {
+			controls: [],
+			center: [53.87447458814268, 27.676578589935176],
+			zoom: 14
+		});
+
+		myMap.behaviors.disable('drag');
+
+		let MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+			`<div class="my-balloon">
+				{{properties.balloonContent}}
+			</div>`
+		);
+
+		let myPlacemark = new ymaps.Placemark([53.87447458814268, 27.676578589935176],
+			{
+				balloonContent: `Томская улица, 65к2`
+			},
+			{
+				hideIconOnBalloonOpen: false,
+				preset: 'islands#icon',
+				iconColor: '#ea4335',
+				balloonShadow: true,
+				balloonLayout: MyBalloonLayout,
+			});
+
+		myMap.geoObjects.add(myPlacemark);
+		myPlacemark.balloon.open();
+	}
+}
+
+// tel mask
+if (document.querySelector('input[type="tel"]')) {
+	const inputsTel = document.querySelectorAll('input[type="tel"]');
+	const im = new Inputmask('+375 (99) 999-99-99');
+	im.mask(inputsTel);
 }
 
 function accardion() {

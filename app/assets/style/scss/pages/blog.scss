@@ -1,0 +1,177 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+BLOG US PAGE	
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.blog-page {
+	background-color: var(--color-bg-ligBlue);
+
+	.blog-note {
+		padding: 61px 0 80px;
+	
+		&__container {
+			position: relative;
+		}
+	
+		&:nth-child(odd) {
+			background-color: #fff;
+		}
+	
+		&__img {
+			flex-shrink: 0;
+			align-self: flex-start;
+			width: 100%;
+			border-radius: 20px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			&::before {
+				content: '';
+				display: block;
+				padding-bottom: 68.7%;
+			}
+		}
+	
+		&__content {
+			display: flex;
+			flex-direction: column;
+			margin-left: 36.4%;
+			padding-left: 58px;
+			font-size: 18px;
+		}
+	
+		&__col {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 36.4%;
+		}
+	
+		&__title,
+		&__text {
+			/* autoprefixer: off */
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			/* autoprefixer: on */
+			overflow: hidden;
+		}
+	
+		&__title {
+			margin-bottom: 25px;
+			max-width: 300px;
+			min-height: 80px;
+			font: 600 24px/#{(32/24)} var(--fm-2);
+			-webkit-line-clamp: 2;
+		}
+	
+		&__text {
+			/* autoprefixer: off */
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			/* autoprefixer: on */
+			margin-bottom: 32px;
+			min-height: 140px;
+			font-weight: 300;
+			line-height: (28/18);
+			color: #7D7987;
+			-webkit-line-clamp: 5;
+		}
+	
+		&__btn {
+			margin: auto auto 0 0;
+		}
+	
+		&__date {
+			margin-top: 20px;
+			font: italic 200 16px/1 var(--fm-1);
+		}
+	
+		@include desctop-min {
+			&__title {
+				margin-bottom: 20px;
+				min-height: 60px;
+				font-size: 22px;
+			}
+			&__textBox {
+				padding-left: 25px;
+			}
+		}
+	
+		@include table {
+			&__title {
+				margin-bottom: 20px;
+				font-size: 22px;
+			}
+			&__textBox {
+				padding-left: 25px;
+			}
+		}
+	
+		@include mobile {
+			padding: 20px 0 45px;
+			&__content {
+				margin-left: 0;
+				padding-left: 0;
+			}
+	
+			&__col {
+				position: static;
+				width: auto;
+			}
+	
+			&__title {
+				order: -1;
+				margin-bottom: 10px;
+			}
+	
+			&__date {
+				order: -1;
+				margin: 0 0 25px 0;
+			}
+	
+			&__img {
+				margin: 0 auto;
+				max-width: 500px;
+			}
+	
+			&__text {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	.btn-txt {
+		span {
+			padding-bottom: 0px;
+			border-bottom: 1px solid currentColor;
+		}
+
+		svg {
+			width: 27.7px;
+			height: 17.8px;
+		}
+	}
+
+	.prev-btn {
+		position: relative;
+		margin-bottom: 90px;
+		top: -20px;
+	}
+
+	@include table {
+		.prev-btn {
+			top: 0;
+			margin: 30px 0 60px;
+		}
+	}
+}
+
+/*blocks*/
+.b-blog,
+.prev-btn-container.container {
+	@media (min-width: #{$desctop-mid}px) {
+		.container {
+			max-width: 1200px;
+		}
+	}
+}
+
+
