@@ -35,11 +35,15 @@
 }
 
 @mixin tel {
-    @media (max-width: $tel) {
+    @media (max-width: #{$tel}px) {
         @content;
     }
 }
 
 @function rubberSize($minW, $maxW, $minScrin, $maxScrin) {
 	@return calc(#{$minW}px + (#{$maxW} - #{$minW})*((100vw - #{$minScrin}px)/(#{$maxScrin} - #{$minScrin})));
+}
+
+@function getSE($childSize, $parentSize) {
+	@return #{$childSize/$parentSize}em;
 }	

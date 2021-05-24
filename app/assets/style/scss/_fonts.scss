@@ -18,6 +18,18 @@ FONT FAMILY
 	}
 
 @include font-face('Jost', 300, '../../fonts/', 'Jost-Thin');
+@font-face {
+    font-family: 'Jost';
+    src: url('../../fonts/Jost-LightItalic.eot');
+    src: url('../../fonts/Jost-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Jost-LightItalic.woff2') format('woff2'),
+        url('../../fonts/Jost-LightItalic.woff') format('woff'),
+        url('../../fonts/Jost-LightItalic.ttf') format('truetype'),
+        url('../../fonts/Jost-LightItalic.svg#Jost-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 @include font-face('Jost', 400, '../../fonts/', 'Jost-Regular');
 @include font-face('Jost', 500, '../../fonts/', 'Jost-Medium');
 @include font-face('Jost', 600, '../../fonts/', 'Jost-SemiBold');
@@ -28,7 +40,7 @@ FONT FAMILY
 @include font-face('Montserrat Alternates', 600, '../../fonts/', 'MontserratAlternates-SemiBold');
 @include font-face('Montserrat Alternates', 700, '../../fonts/', 'MontserratAlternates-Bold');
 
-font-face {
+@font-face {
     font-family: 'Montserrat Alternates';
     src: url('../../fonts/MontserratAlternates-ExtraLightItalic.eot');
     src: url('../../fonts/MontserratAlternates-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
@@ -40,6 +52,11 @@ font-face {
     font-style: italic;
     font-display: swap;
 }
+
+@include font-face('IBM Plex Sans', 400, '../../fonts/', 'IBMPlexSans');
+@include font-face('Inter', 400, '../../fonts/', 'IBMPlexSans');
+
+
 
 
 

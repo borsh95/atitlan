@@ -1,0 +1,100 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+SHOP PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.sp-page {
+	&__title {
+		padding: 18px 0 17px;
+		background-color: #e5e5e5;
+		font-weight: 700;
+		line-height: (92/64);
+		text-align: center;
+	}
+
+	&__top {
+		&-container {
+			display: flex;
+			align-items: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			min-height: 110px;
+		}
+
+		.search {
+			margin-left: auto;
+		}
+	}
+
+	&__info {
+		padding: 35px 0 55px;
+	}
+
+	@include desctop-mid {
+		&__top {
+			&-container {
+				min-height: 95px;
+			}
+		}
+	}
+
+	@include desctop-min {
+		&__top {
+			&-container {
+				min-height: 80px;
+			}
+		}
+	}
+}
+
+/*blocks*/
+.panel {
+	padding: 70px 0 123px;
+	&__container {
+		display: flex;
+	}
+
+	&__aside  {
+		flex-shrink: 0;
+		margin-right: 3.475%;
+		width: 21.4%;
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+
+	@include desctop-min {
+		&__aside {
+			margin-right: 3%;	
+			width: 23.5%;
+		}
+	}
+
+	@include table {
+		padding: 55px 0 95px;
+
+		&__aside {
+			display: none;
+		}
+	}
+
+	@include mobile {
+		padding: 40px 0 60px;
+	}
+}
+
+/*sp-info*/
+.sp-info {
+	padding: 50px 0;
+	
+	&__title {
+		margin-bottom: 30px;
+	}
+}
+
+@include desctop-min {
+
+}
+
+@include table {
+
+}

@@ -98,6 +98,12 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+.sp-title-2 {
+	@extend .title-2;
+	font-weight: 500;
+	color: var(--color-primary);
+}
+
 .title-3 {
 	font-weight: 500;
 	font-size: 30px;
@@ -110,11 +116,18 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
-.title-3 {
+.sp-title-3 {
+	@extend .title-3;
 	font-weight: 500;
-	font-size: 30px;
-	line-height: 34px;
-	font-family: var(--fm-2);
+	color: var(--color-primary);
+
+	@include desctop-mid {
+		font-size: 28px;
+	}
+
+	@include desctop-min {
+		font-size: 24px;
+	}
 
 	@include mobile {
 		font-size: 20px;
@@ -132,6 +145,24 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+.sp-text {
+	font-size: 24px;
+	line-height: (35/24);
+	color: #000000;
+
+	@include desctop-mid {
+		font-size: 22px;
+	}
+
+	@include desctop-min {
+		font-size: 18px;
+	}
+
+	@include mobile {
+		font-size: 16px;
+	}
+}
+
 @import "./components/btns";
 @import "./components/blocks";
 @import "./components/header";
@@ -142,3 +173,11 @@ body::-webkit-scrollbar-thumb {
 @import "./pages/about-us";
 @import "./pages/blog";
 @import "./pages/blog-note";
+@import "./pages/contacts";
+@import "./pages/sp-page";
+@import "./pages/category";
+@import "./pages/subcategory";
+@import "./pages/covers";
+@import "./pages/fl-product";
+@import "./pages/product-des.scss";
+@import "./pages/catalog";

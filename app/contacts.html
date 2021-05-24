@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="ArtBro">
+	<title>Главная</title>
+	<!-- yandex map -->
+	<script src="https://api-maps.yandex.ru/2.1/?275f97ae-788c-4c42-ac7e-e3a834f55d00&lang=ru_RU"
+		type="text/javascript"></script>
+	<link rel="stylesheet" href="./assets/style/css/style.css">
+</head>
+
+<body>
+	<!-- global wrapp -->
+	<div class="global-wrap contacts-page">
+		<!-- HEADER -->
+		<header>
+			<div class="b-container vt-center">
+				<div class="header__inner">
+					<!-- logo -->
+					<a class="header__logo logo logo--img">
+						<img src="./assets/img/logo--img.png" alt="logotip">
+					</a>
+					<a class="header__logo logo logo--text for-table">
+						Atitlan
+					</a>
+					<!-- header top -->
+					<div class="header__top">
+						<div class="header__top-col">
+							<div class="header__firm-info firm-info firm-info--address">
+								г. Минск, ул. Томская, <br>
+								д. 65, к. 2, офис 2Н
+							</div>
+						</div>
+						<div class="header__top-col">
+							<a class="header__firm-info firm-info firm-info--tel" href="tel:+375293328700">
+								+ 375(29)332-87-00
+							</a>
+							<div class="header__contacts-ics contacts-ics vt-center">
+								<a class="contacts-ics__item contacts-ics__link--viber"
+									href="https://msngr.link/vi/375293328700">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#ic-viber"></use>
+									</svg>
+								</a>
+								<a class="contacts-ics__item contacts-ics__link--wp"
+									href="https://msngr.link/wa/375293328700">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#ic-wp"></use>
+									</svg>
+								</a>
+								<a class="contacts-ics__item contacts-ics__link--insta" href="#">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#ic-insta"></use>
+									</svg>
+								</a>
+								<a class="contacts-ics__item contacts-ics__link--telegram"
+									href="https://msngr.link/tg/https://msngr.link/wa/375293328700">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#ic-telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="header__top-col">
+							<a class="header__firm-info firm-info firm-info--email" href="mailto:infoatl2202@mail.ru">
+								infoatl2202@mail.ru
+							</a>
+							<span class="header__firm-info firm-info firm-info--time">Пн - сб 9:00 - 22:00</span>
+						</div>
+					</div>
+					<!-- haburger -->
+					<button class="header__hamburger hamburger for-table" aria-label="hamburger"><span></span></button>
+					<!-- tel for table -->
+					<a class="header__tel--for-table for-table" href="tel:+375293328700">
+						<svg>
+							<use xlink:href="./assets/img/sprite.svg#ic-tel_for-table"></use>
+						</svg>
+					</a>
+					<!-- burger menu -->
+					<nav class="header__burger">
+						<ul class="header__menu menu">
+							<li class="menu__item" data-dropdown="wrapp">
+								<span class="menu__item-link" data-dropdown="btn">
+									<span>БАССЕЙНЫ</span>
+								</span>
+								<ul class="menu__item-sub sub-menu sub-menu--lvl-2" data-dropdown="list">
+									<li class="sub-menu__item">
+										<a href="#">Композитные бассейны</a>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#">Пленочные бассейны</a>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#">Полипропиленовые бассейны</a>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#">Бетонные бассейны</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item" data-dropdown="wrapp">
+								<span class="menu__item-link" data-dropdown="btn">
+									<span>КАТАЛОГ</span>
+								</span>
+								<ul class="menu__item-sub sub-menu sub-menu--lvl-2" data-dropdown="list">
+									<li class="sub-menu__item">
+										<a href="#">Оборудования</a>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#">Накрытия</a>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#">Химия</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">КУПЕЛИ</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">SPA&nbsp;-&nbsp;БАССЕЙНЫ</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">КОНТАКТЫ</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- MAIN -->
+		<main>
+			<div class="contacts-page__top">
+				<div class="contacts-page__top-bg">
+					<picture>
+						<source srcset="./assets/img/pages/contacts/contacts__bg.webp" type="image/webp">
+						<img src="./assets/img/pages/contacts/contacts__bg.jpg"
+							srcset="./assets/img/pages/contacts/contacts__bg@2x.jpg 2x" alt="Фон">
+					</picture>
+				</div>
+				<h1 class="contacts-page__title">Наши контакты</h1>
+			</div>
+			<div class="contacts-page__mid">
+				<div class="contacts-page__mid-container container">
+					<!-- contact frame -->
+					<div class="contacts-page__contact-frame contact-frame">
+						<div class="contact-frame__row flex">
+							<!-- left col -->
+							<div class="contact-frame__col contact-frame__col--data">
+								<article class="contact">
+									<h6 class="contact__title title-3">Время работы</h6>
+									<p class="contact__text">Пн - Пт с 10:00 до 19:00</p>
+									<p class="contact__text">Сб - Вс — выходные</p>
+								</article>
+								<article class="contact">
+									<h6 class="contact__title title-3">Адрес</h6>
+									<p class="contact__text">г.&nbsp;Минск, ул.&nbsp;Томская, д.&nbsp;65, к.&nbsp;2,
+										офис&nbsp;2Н</p>
+								</article>
+								<article class="contact">
+									<h6 class="contact__title title-3">Телефоны</h6>
+									<p class="contact__text"><a
+											href="tel:+375293328700">+&nbsp;375&nbsp;(29)&nbsp;332-87-00</a>; <a
+											href="tel:+375295627273">+&nbsp;375&nbsp;(29)&nbsp;562-72-73</a></p>
+									<p class="contact__text">Отдел продаж: <a
+											href="tel:+375173036603">+&nbsp;375&nbsp;(17)&nbsp;303-66-03</a></p>
+								</article>
+								<div class="contact">
+									<p class="contact__text contact__text--with-ic vt-center">
+										<svg>
+											<use xlink:href="./assets/img/sprite.svg#contact-mail-ic"></use>
+										</svg>
+										<a href="mailto:infoatl2202@mail.ru">
+											E-mail: <a href="mailto:infoatl2202@mail.ru">infoatl2202@mail.ru</a>
+										</a>
+									</p>
+								</div>
+							</div>
+							<!-- right col -->
+							<div class="contact-frame__col contact-frame__col--form">
+								<form class="contact-frame__form" action="#">
+									<div class="b-input">
+										<input type="text" name="firstname" placeholder="Имя:">
+									</div>
+									<div class="b-input">
+										<input type="tel" name="tel" placeholder="Телефон:">
+									</div>
+									<div class="b-input">
+										<input type="email" name="email" placeholder="Почта:">
+									</div>
+									<button class="contact-frame__form-btn btn-type-3" type="submit"
+										aria-label="Отправить">
+										Отправить
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="cotnacts-frame__row">
+							<div class="contact-frame__sci flex">
+								<a href="#">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#contact-f-ic"></use>
+									</svg>
+								</a>
+								<a href="#">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#contact-inst-ic"></use>
+									</svg>
+								</a>
+								<a href="https://msngr.link/vi/375293328700">
+									<svg>
+										<use xlink:href="./assets/img/sprite.svg#contact-viber-ic"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-page__bottom">
+				<div id="map"></div>
+			</div>
+
+		</main>
+		<!-- FOOTER -->
+		<footer>
+			<!-- footer top -->
+			<div class="footer__top">
+				<div class="b-container">
+					<div class="footer__logo-wrap">
+						<a class="footer__logo logo logo--text" href="#">Atitlan</a>
+					</div>
+					<div class="footer__content">
+						<div class="footer__col">
+							<p class="footer__col-item">СТРОИТЕЛЬСТВО БАССЕЙНОВ <br> В МИНСКЕ</p>
+							<p class="footer__col-text">ЧТУП "Атитлан" <br> УНН/ИНН: 191147372</p>
+						</div>
+						<div class="footer__col">
+							<a class="footer__col-item" href="#">КАТАЛОГ</a>
+							<a class="footer__col-item" href="#">БАССЕЙНЫ</a>
+							<a class="footer__col-item" href="#">ОБОРУДОВАНИЕ</a>
+							<a class="footer__col-item" href="#">ХИМИЯ</a>
+						</div>
+						<div class="footer__col">
+							<a class="footer__col-item" href="#">КОНТАКТЫ</a>
+							<a class="footer__col-item" href="#">О НАС</a>
+							<a class="footer__col-item" href="#">ДОСТАВКА</a>
+						</div>
+						<!-- contacts -->
+						<div class="footer__contacts-ics contacts-ics contacts-ics--vertical">
+							<a class="contacts-ics__item contacts-ics__link--viber"
+								href="https://msngr.link/vi/375293328700">
+								<svg>
+									<use xlink:href="./assets/img/sprite.svg#ic-viber"></use>
+								</svg>
+							</a>
+							<a class="contacts-ics__item contacts-ics__link--wp"
+								href="https://msngr.link/wa/375293328700">
+								<svg>
+									<use xlink:href="./assets/img/sprite.svg#ic-wp"></use>
+								</svg>
+							</a>
+							<a class="contacts-ics__item contacts-ics__link--insta" href="#">
+								<svg>
+									<use xlink:href="./assets/img/sprite.svg#ic-insta"></use>
+								</svg>
+							</a>
+							<a class="contacts-ics__item contacts-ics__link--telegram"
+								href="https://msngr.link/tg/https://msngr.link/wa/375293328700">
+								<svg>
+									<use xlink:href="./assets/img/sprite.svg#ic-telegram"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer bottom -->
+			<div class="footer__bottom">
+				<div class="b-container">
+					<p class="footer__lav footer__bottom-item">Все права защищены</p>
+					<a class="footer__bottom-item" href="#">Политика конфиденциальности</a>
+					<a class="footer__ArtBro ArtBro footer__bottom-item" target="_blank" href="cweb.by">Crystal Web
+						2020</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- input mask -->
+	<script src="./assets/js/libraries/inputMask.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

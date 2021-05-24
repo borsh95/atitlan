@@ -5,6 +5,11 @@
 	display: flex;
 }
 
+.flex-wrap {
+	@extend .flex;
+	flex-wrap: wrap;
+}
+
 /*Общие стили сетки*/
 .vt-center {
 	display: flex;
@@ -68,6 +73,10 @@
 	font-weight: 600;
 }
 
-.bf-gray {
+.bg-gray {
 	background-color: #e5e5e5;
+}
+
+.bg-white {
+	background-color: #fff;
 }

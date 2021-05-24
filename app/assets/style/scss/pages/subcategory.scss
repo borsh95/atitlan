@@ -1,0 +1,47 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+SUBACTEGORY PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.subcategory-page {
+	&__products {
+		padding: 39px 0 102px;
+	}
+
+	&__sp-info {
+		padding-top: 50px;
+
+		.sp-info__title {
+			margin-bottom: 40px;
+			font-weight: 400;
+			font-family: var(--fm-2);
+			color: #3F3F3F;
+		}
+	}
+
+	@include table {
+		.sp-page__top {
+			display: none;
+		}
+
+		&__products {
+			padding: 30px 0 70px;
+		}
+
+		.sp-info__title {
+			margin-bottom: 30px;
+		}
+	}
+
+	@include mobile {
+		&__sp-info {
+			padding-top: 30px;
+		}
+
+		.sp-info__title {
+			margin-bottom: 25px;
+		}
+
+		&__products {
+			padding: 30px 0 50px;
+		}
+	}
+}

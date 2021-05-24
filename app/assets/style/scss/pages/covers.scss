@@ -1,0 +1,107 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+COVERS PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.covers-page {
+	&__panel {
+		padding: 41px 0 127px;
+	}
+
+	.panel__sp-info {
+		padding: 0 0 30px;
+
+		.sp-info__title {
+			margin-bottom: 65px;
+			text-align: center;
+		}
+	}
+
+	&__category {
+		margin-top: 90px;
+	}
+
+	&__sp-info {
+		.sp-info__container {
+			padding: 125px 105px 95px 220px;
+		}
+
+		.sp-info__text {
+			& > * {
+				margin-bottom: 0.5em;
+			}
+
+			li::before {
+				content: "- ";
+			}
+
+			li:not(:last-child) {
+				margin-bottom: 0.5em;
+			}
+		}
+
+
+	}
+
+	@include desctop-mid {
+		.sp-page__top {
+			display: none;
+		}
+
+		&__panel {
+			padding: 40px 0 85px;
+		}
+
+		.panel__sp-info {
+			.sp-info__title {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__category {
+			margin-top: 50px;
+		}
+
+		&__sp-info {
+			.sp-info__container {
+				padding: 90px 105px 95px 190px;
+			}	
+		}
+	}
+
+	@include desctop-min {
+		.panel__sp-info {
+			.sp-info__title {
+				margin-bottom: 35px;
+			}
+		}
+
+		&__sp-info {
+			.sp-info__container {
+				padding: 65px 80px 55px 140px;
+			}	
+		}
+	}
+
+	@include table {
+		&__sp-info {
+			.sp-info__container {
+				padding: 0 20px;
+			}	
+		}
+	}
+
+	@include mobile {
+		.panel__sp-info {
+			.sp-info__title {
+				margin-bottom: 25px;
+			}
+		}
+
+		&__panel {
+			padding: 41px 0 60px;
+		}
+
+		&__category {
+			margin-top: 30px;
+		}
+	}
+}
